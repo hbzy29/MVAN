@@ -2,7 +2,7 @@
 
 **MVAN: Towards Interpretable Joint Prediction of Multiple Flight Safety Events with Multi-View Attention Network**
 
-**Authors**: Jiaxing Shang, Chengxiang Li, Xu Li, et al.
+**Authors**:  Chengxiang Li, Xu Li, et al.
 
 This repository contains the source code for the paper:
 
@@ -156,3 +156,6 @@ Used for efficient attention mechanisms and long-sequence modeling.
 conda create -n MVAN python=3.7
 conda activate MVAN
 pip install -r requirements.txt
+
+## 7. Contact
+bruceli.cx@foxmail.com(Chengxiang Li)
