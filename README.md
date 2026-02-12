@@ -1,3 +1,34 @@
+# MVAN
+
+**MVAN: Towards Interpretable Joint Prediction of Multiple Flight Safety Events with Multi-View Attention Network**
+
+**Authors**: Jiaxing Shang, Chengxiang Li, Xu Li, et al.
+
+This repository contains the source code for the paper:
+
+> **MVAN: Towards Interpretable Joint Prediction of Multiple Flight Safety Events with Multi-View Attention Network**
+
+---
+
+## 1. Project Overview
+
+Flight safety risk analysis often involves **multiple correlated safety events** and **heterogeneous flight data views**.  
+To address this challenge, we propose **MVAN**, a **Multi-View Attention Network** that jointly predicts multiple flight safety events while providing **interpretable attention-based insights**.
+
+Due to the sensitive nature of **Quick Access Recorder (QAR)** data, **the full raw dataset cannot be publicly released**.  
+However, this repository provides:
+
+- The **complete implementation** of the proposed MVAN model  
+- **All baseline models** used in both multi-task and single-task settings  
+- The **full data preprocessing pipeline**  
+- A **limited set of anonymized QAR samples** (several dozen flights) for demonstration and reproducibility
+
+This allows researchers to fully understand, reproduce, and extend our work.
+
+---
+
+## 2. Repository Structure
+
 
 ### 2.1 `baselines/`
 
