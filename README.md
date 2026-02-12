@@ -1,24 +1,49 @@
-# MVAN
-MVAN: Towards Interpretable Joint Prediction of Multiple Flight Safety Events with Multi-View Attention Network
 
-Authors: Jiaxing Shang, Chengxiang Li, Xu Li, et al.
+### 2.1 `baselines/`
 
-This project contains the source code for the paper:
+This folder contains implementations of **baseline methods** used in the experiments, including:
 
-**MVAN: Towards Interpretable Joint Prediction of Multiple Flight Safety Events with Multi-View Attention Network**
+- Single-task learning models  
+- Multi-task learning baselines  
+- Traditional machine learning and deep learning approaches  
 
-
-Due to the sensitive nature of the QAR data, we provide the complete implementation of our proposed approach and all baseline models used in both multi-task and single-task experiments, along with the full data-processing code and a limited set of several dozen anonymized QAR samples
-
-
-# Python Virtual Environment
-
-This project uses a **Conda + pip** based Python virtual environment, designed primarily for **deep learning, graph neural networks (GNNs), and Transformer-based research**.  
-The environment has been tested and validated on **Linux (x86_64)**.
+All baselines follow the same input/output protocol as MVAN for fair comparison.
 
 ---
 
-## 1. System & Environment Overview
+### 2.2 `data/`
+
+This folder stores:
+
+- A **small set of anonymized QAR samples**  
+- Example data files used to demonstrate the data format  
+
+⚠️ **Note**  
+The complete QAR dataset used in the paper is **not publicly available** due to safety and privacy constraints.
+
+---
+
+### 2.3 `data_process/`
+
+This folder contains the **entire data preprocessing pipeline**, including:
+
+- Raw QAR signal parsing  
+- Feature extraction and normalization  
+- Multi-view feature construction  
+- Label generation for multiple flight safety events  
+
+The provided code reflects exactly the preprocessing procedure described in the paper.
+
+---
+
+## 3. Python Virtual Environment
+
+This project uses a **Conda + pip** based Python virtual environment, designed primarily for **deep learning, graph neural networks (GNNs), and Transformer-based research**.  
+The environment has been tested on **Linux (x86_64)**.
+
+---
+
+## 4. System & Environment Overview
 
 - **Operating System**: Linux (x86_64)
 - **Python Version**: 3.7.12
@@ -27,14 +52,14 @@ The environment has been tested and validated on **Linux (x86_64)**.
 - **PyTorch Version**: 1.13.0 (CUDA 11)
 
 > ⚠️ **Important**  
-> This environment relies on **Python 3.7**, which is officially deprecated.  
-> It is recommended **only for reproducing legacy experiments or maintaining existing projects**.
+> Python 3.7 is officially deprecated.  
+> This environment is intended **only for reproducing legacy experiments** reported in the paper.
 
 ---
 
-## Requirements
+## 5. Requirements
 
-### Deep Learning & GPU
+### 5.1 Deep Learning & GPU
 
 - torch==1.13.0  
 - torchvision==0.14.0  
@@ -46,18 +71,18 @@ Used for GPU-accelerated training and inference.
 
 ---
 
-###Graph Learning & GNN
+### 5.2 Graph Learning & GNN
 
 - dgl-cu101==0.6.0.post1  
 - torch-geometric==2.3.1  
 - networkx==2.6.3  
 - python-louvain==0.16  
 
-Provides support for graph construction, community detection, and graph neural networks.
+Supports graph construction, community detection, and graph neural networks.
 
 ---
 
-### 2.3 Transformer & Attention Mechanisms
+### 5.3 Transformer & Attention Mechanisms
 
 - reformer-pytorch==1.4.4  
 - axial-positional-embedding==0.2.1  
@@ -66,11 +91,11 @@ Provides support for graph construction, community detection, and graph neural n
 - product-key-memory==0.2.10  
 - einops==0.6.1  
 
-Used for efficient attention mechanisms and long-sequence Transformer models.
+Used for efficient attention mechanisms and long-sequence modeling.
 
 ---
 
-###  Scientific Computing & Machine Learning
+### 5.4 Scientific Computing & Machine Learning
 
 - numpy==1.21.6  
 - scipy==1.7.3  
@@ -79,26 +104,24 @@ Used for efficient attention mechanisms and long-sequence Transformer models.
 - sympy==1.10.1  
 - mpmath==1.3.0  
 
-Supports numerical computation, classical machine learning, and mathematical modeling.
-
 ---
 
-###  Visualization & Analysis
+### 5.5 Visualization & Development Tools
 
 - matplotlib==3.5.3  
 - seaborn==0.12.2  
 - tqdm==4.66.4  
-
-Used for experiment visualization and progress tracking.
-
---
-### Jupyter & Development Tools
-
 - ipython==7.33.0  
 - ipykernel==6.16.2  
 - jupyter-client==7.4.9  
 - jupyter-core==4.12.0  
 - debugpy==1.7.0  
 
+---
 
+## 6. Environment Setup
 
+```bash
+conda create -n MVAN python=3.7
+conda activate MVAN
+pip install -r requirements.txt
