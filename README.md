@@ -160,4 +160,8 @@ pip install -r requirements.txt
 ---
 
 ## 7. Contact
-bruceli.cx@foxmail.com(Chengxiang Li)
+
+For questions or collaboration, please contact:
+
+- **Chengxiang Li**  
+  bruceli.cx@foxmail.com
