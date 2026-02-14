@@ -148,18 +148,8 @@ Used for efficient attention mechanisms and long-sequence modeling.
 - jupyter-core==4.12.0  
 - debugpy==1.7.0  
 
----
 
-## 6. Environment Setup
-
-```bash
-conda create -n MVAN python=3.7
-conda activate MVAN
-pip install -r requirements.txt
-
----
-
-## 7. Contact
+## 6. Contact
 
 For questions or collaboration, please contact:
 
